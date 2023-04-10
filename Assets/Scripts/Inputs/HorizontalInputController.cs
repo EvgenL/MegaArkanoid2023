@@ -11,9 +11,9 @@ namespace DefaultNamespace
             _horizontalInput = Input.GetAxis("Horizontal");
         }
 
-        public override float GetCurrentInput()
+        public override float GetCurrentInput(float currentPosition, float speed)
         {
-            return _horizontalInput;
+            return currentPosition + _horizontalInput * speed;
         }
     }
 }
